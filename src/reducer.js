@@ -1,5 +1,5 @@
 //* начальное состояние
-const initialState = {value: 1};
+const initialState = {value: 0, foo: 'bar'};
 
 //* reducer
 // чистая функция зависит от state и action,
