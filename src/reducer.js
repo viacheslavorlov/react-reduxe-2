@@ -1,5 +1,5 @@
 //* начальное состояние
-const initialState = {value: 0, foo: 'bar', number: 42};
+const initialState = {counter: 0, foo: 'bar', number: 42};
 
 //* reducer
 // чистая функция зависит от state и action,
@@ -8,11 +8,11 @@ const reducer = (state = initialState, action) => {
 	console.log(state)
 	switch (action.type) {
 		case  'INC':
-			return {...state, value: state.value + 1};
+			return {...state, counter: state.counter + 1};
 		case  'DEC':
-			return {...state, value: state.value - 1};
+			return {...state, counter: state.counter - 1};
 		case 'RND':
-			return {...state, value: state.value + action.payload};
+			return {...state, counter: state.counter + action.payload};
 		case 'DIV':
 			return {...state, number: state.number / 2};
 		case 'MULT':
